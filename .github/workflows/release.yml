@@ -19,6 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
@@ -27,9 +32,7 @@ jobs:
           path: ./build/libs/
 
       - name: Upload to Modrinth
-        run: |
-          chmod +x ./gradlew
-          ./gradlew build modrinth
+        run: ./gradlew modrinth
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
