@@ -95,6 +95,6 @@ modrinth {
     uploadFile = remapJar
 
     dependencies {
-        required.version "fabric", "0.87.0"
+        required.project "fabric-api"
     }
 }
