@@ -26,12 +26,14 @@ jobs:
           name: builds
           path: ./build/libs/
 
-      - name: Release
-        run: ./gradlew build modrinth
+      - name: Upload to Modrinth
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build modrinth
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
-      - name: Release
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
