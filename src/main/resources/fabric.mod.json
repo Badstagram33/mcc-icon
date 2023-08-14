@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mcc-icon",
+  "version": "${version}",
+  "name": "MCC Icon",
+  "description": "Change the Minecraft icon to the MCC Island logo",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Badstagram33/MCCIcon",
+    "issues": "https://github.com/Badstagram33/MCCIcon/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/mccicon/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "gay.badstagram.mccicon.client.MCCIconClient"
+    ]
+  },
+  "mixins": [
+    "MCCIcon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
