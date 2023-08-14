@@ -89,4 +89,10 @@ modrinth {
     projectId = "YZFN5Uzs"
     versionName = "${project.mod_version}"
     versionType = "release"
+    gameVersions = ["1.20.1"]
+    uploadFile = remapJar
+
+    dependencies {
+        required.version "fabric", "0.87.0"
+    }
 }
