@@ -4,10 +4,12 @@
   "version": "${version}",
   "name": "MCC Icon",
   "description": "Change the Minecraft icon to the MCC Island logo",
-  "authors": [],
+  "authors": [
+    "Badstagram"
+  ],
   "contact": {
-    "repo": "https://github.com/Badstagram33/MCCIcon",
-    "issues": "https://github.com/Badstagram33/MCCIcon/issues"
+    "repo": "https://github.com/Badstagram33/mcc-icon",
+    "issues": "https://github.com/Badstagram33/mcc-icon/issues"
   },
   "license": "MIT",
   "icon": "assets/mccicon/icon.png",
